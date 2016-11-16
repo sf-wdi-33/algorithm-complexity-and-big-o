@@ -143,18 +143,18 @@ Algorithms that process each input at least once will take at least **O(n)** tim
 ```js
 function addAll(numArray){
     var sum = 1;                             // O(1)
-    for (var i=0; i<numArray.length; i++){   // n times:
+    for (var i=0; i<numArray.length; i++){   // n times, or O(n)
         sum = sum + numArray[i];                // O(1)
     }
     return sum;                              // O(1)
 }
 ```
 
-Following our [rules for evaluating complexity](#evaluating-complexity), the time complexity of `addAll` is `O(1) + n*O(1) + O(1)`. You might be tempted to call this `O(n) + 2*O(1)`, but don't forget to  simplify!  
+Following our [rules for evaluating complexity](#evaluating-complexity), the time complexity of `addAll` is `O(1) + O(n)*O(1) + O(1)`. You might be tempted to call this `O(n) + 2*O(1)`, but don't forget to  simplify!  
 
 <details><summary>*Optional: What would happen if the work going on inside the loop had been O(n<sup>2</sup>)?* </summary>
 
-We still follow the exact same rules, so instead of the term from the loop being `n*O(1)`, we get `n` * O(n<sup>2</sup>), which yields O(n<sup>3</sup>).
+We still follow the exact same rules, so instead of the term from the loop being `O(n)*O(1)`, we get `O(n)` * O(n<sup>2</sup>), which yields O(n<sup>3</sup>).
 </details>
 
 
@@ -203,7 +203,7 @@ Of course, this would also be the time complexity of a loop that ran `n` times a
 
 An O(2<sup>n</sup>) algorithm requires double the resources for each additional input. This is an example of exponential growth - and it gets out of hand very quickly.
 
-```
+```js
 function fibonacci(num) {
   if (num <= 1){
     return num;
