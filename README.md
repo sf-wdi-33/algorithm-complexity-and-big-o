@@ -33,13 +33,13 @@ Location: SF
 * Compare and contrast linear or "brute force" search with binary search.
 
 # Big O Notation and Algorithm Analysis
-
+<!--
 ###What is an algorithm?
 
 An algorithm is a set of instructions to find the solution to a problem.  It gives step-by-step operations to be performed that will take you from *any* valid input for the problem to an output.
 
 We've been creating algorithms, in one form or another, throughout this class.
-
+-->
 ###What is efficiency?
 
 Whenever we create algorithms, we need to be aware that they run on computers, and computers require time and space (memory) to process every instruction.
